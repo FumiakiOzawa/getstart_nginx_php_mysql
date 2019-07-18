@@ -15,7 +15,7 @@ services:
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
     nginx:
-        image: nginx:latest
+        image: nginx:1.17
         ports:
             - 80:80
         volumes:
