@@ -1,1 +1,1 @@
-# getstart_nginx_php_mysql
+.env ファイルは共有していません。自分で適当に作成してください
