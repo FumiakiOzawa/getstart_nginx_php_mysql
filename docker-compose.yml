@@ -8,8 +8,8 @@ services:
         ports:
             - 9000:9000
         volumes:
-            - ./code:/srv/www/api
-            - ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+            - ./www/html:/var/www/html
+            # - ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
         environment:
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -19,7 +19,7 @@ services:
         ports:
             - 80:80
         volumes:
-            - ./code:/srv/www/api
+            - ./www:/var/www/html
             - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - php
